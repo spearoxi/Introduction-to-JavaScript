@@ -179,7 +179,7 @@ Math.floor(Math.random()*3);
   else if (user === 1){
     user = 'paper';
   }
-  else if(user === 2){
+  else{
     user = 'scissors';
   }
 
@@ -197,7 +197,7 @@ Math.floor(Math.random()*3);
 
 function game(user, computer){
     if(user === 'rock' && computer === 'paper'){
-      return "you lose!";
+      return 'you lose!';
     }
     else if(user === 'paper' && computer === 'rock'){
       return 'you win!';
@@ -211,7 +211,7 @@ function game(user, computer){
     else if(user === 'paper' && computer === 'scissors'){
       return 'you lose!';
     }
-    else if(user === 'rock' && computer == 'scissors'){
+    else if(user === 'rock' && computer === 'scissors'){
       return 'you win!';
     }
     else if(user === computer){
@@ -267,7 +267,7 @@ function annoyingSong(/*add your code here*/){
         /*add your code here*/
   }
 
-
+  
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
@@ -283,11 +283,26 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+      if(score >= 90 && score <= 100){
+        return 'you got an A';
+      }
+      else if(score >= 80 && score <= 89){
+        return 'you got a B';
+      }
+      else if(score >= 70 && score <= 79){
+        return 'you got a C';
+      }
+      else if(score >= 60 && score <= 69){
+        return 'you got a D';
+      }
+      else {
+        return 'you got an F';
+      }
+
   }
   
-  
+  console.log(grade(99));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
