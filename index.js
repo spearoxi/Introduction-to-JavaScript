@@ -168,8 +168,55 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let user = Math.random();
+
+let computer = Math.random();
+Math.floor(Math.random()*3);
+
+  if(user === 0){
+    user = 'rock';
+  }
+  else if (user === 1){
+    user = 'paper';
+  }
+  else if(user === 2){
+    user = 'scissors';
+  }
+
+  if(computer === 0){
+    computer = 'rock';
+  }
+  else if(computer === 1){
+    computer = 'paper';
+  }
+  else{
+    computer = 'scissors';
+  }
+  
+
+
 function game(user, computer){
-    /*add your code here*/
+    if(user === 'rock' && computer === 'paper'){
+      return "you lose!";
+    }
+    else if(user === 'paper' && computer === 'rock'){
+      return 'you win!';
+    }
+    else if(user === 'scissors' && computer === 'rock'){
+      return 'you lose!';
+    }
+    else if(user === 'scissors' && computer === 'paper'){
+      return 'you win';
+    }
+    else if(user === 'paper' && computer === 'scissors'){
+      return 'you lose!';
+    }
+    else if(user === 'rock' && computer == 'scissors'){
+      return 'you win!';
+    }
+    else if(user === computer){
+      return "it's a tie";
+    }
 }
   
   
@@ -185,10 +232,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km*0.621371;
   }
-
+console.log(miles(14));
 
 
 //Task 5b - Feet to CM
@@ -199,10 +246,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm/30.48;
   }
  
+  console.log(feet(91));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
